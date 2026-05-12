@@ -23,13 +23,14 @@ Upload your resume, add a job description, and get a personalised interview repo
 |----------------|------------------------------------------|
 | Framework      | React 18 + Vite                          |
 | Language       | TypeScript                               |
-| Styling        | Tailwind CSS + headless UI + heroicons   |
+| Styling        | Tailwind CSS + tailwind-merge            |
 | State Management | Zustand (auth store)                   |
 | HTTP Client    | Axios (interceptors, withCredentials)    |
 | Routing        | React Router v6 (createBrowserRouter)    |
 | Forms & Validation | React Hook Form + Zod                |
 | Notifications  | React Hot Toast                          |
-| Icons          | Heroicons / Lucide React                 |
+| Icons          | Lucide React                             |
+| Data Fetching  | Tanstack Query                           |
 
 ---
 
