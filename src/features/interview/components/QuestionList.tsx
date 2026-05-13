@@ -20,7 +20,7 @@ export const QuestionList = ({ title, questions, type }: QuestionListProps) => {
 
   return (
     <div className="space-y-4">
-      <h3 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+      <h3 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
         {type === "technical" ? (
           <Target className="h-6 w-6 text-blue-600" />
         ) : (

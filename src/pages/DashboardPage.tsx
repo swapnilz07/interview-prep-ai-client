@@ -40,7 +40,7 @@ export const DashboardPage = () => {
                 <Award className="h-8 w-8 text-green-600" />
                 <div>
                   <h3 className="font-semibold text-gray-900">My Reports</h3>
-                  <p className="text-sm text-gray-600">Track your improvement</p>
+                  <p className="text-sm text-gray-600">Track your reports</p>
                 </div>
               </div>
             </Card>
@@ -64,7 +64,7 @@ export const DashboardPage = () => {
           <p className="text-gray-600">
             Get ready for your next interview with our AI-powered preparation
             tools. Practice with real interview questions, get instant feedback,
-            and track your progress.
+            and track your reports.
           </p>
         </Card>
       </div>

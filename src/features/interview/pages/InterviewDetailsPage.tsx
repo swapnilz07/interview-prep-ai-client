@@ -129,52 +129,54 @@ export const InterviewDetailsPage = () => {
         </div>
 
         {isCompleted && (
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {/* Left Column - Questions */}
-            <div className="lg:col-span-2 space-y-10">
-              <section>
-                <QuestionList 
-                  title="Technical Questions" 
-                  type="technical"
-                  questions={report.technicalQuestions} 
-                />
-              </section>
-              
-              <section>
-                <QuestionList 
-                  title="Behavioral Questions" 
-                  type="behavioral"
-                  questions={report.behavioralQuestions} 
-                />
-              </section>
+          <div className="space-y-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Left Column - Questions */}
+              <div className="lg:col-span-2 space-y-10">
+                <section>
+                  <QuestionList 
+                    title="Technical Questions" 
+                    type="technical"
+                    questions={report.technicalQuestions} 
+                  />
+                </section>
+                
+                <section>
+                  <QuestionList 
+                    title="Behavioral Questions" 
+                    type="behavioral"
+                    questions={report.behavioralQuestions} 
+                  />
+                </section>
+              </div>
+
+              {/* Right Column - Skill Gaps */}
+              <div className="space-y-8">
+                {/* Skill Gaps */}
+                <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <Activity className="h-5 w-5 text-red-500" />
+                    Identified Skill Gaps
+                  </h3>
+                  {report.skillGaps && report.skillGaps.length > 0 ? (
+                    <div className="space-y-3">
+                      {report.skillGaps.map((gap, idx) => (
+                        <SkillGapBadge key={idx} skillGap={gap} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="flex items-center gap-2 text-green-700 bg-green-50 p-3 rounded-lg">
+                      <CheckCircle2 className="h-5 w-5" />
+                      <span className="text-sm font-medium">No major skill gaps identified!</span>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
 
-            {/* Right Column - Skill Gaps & Plan */}
-            <div className="space-y-8">
-              {/* Skill Gaps */}
-              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-                <h3 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                  <Activity className="h-5 w-5 text-red-500" />
-                  Identified Skill Gaps
-                </h3>
-                {report.skillGaps && report.skillGaps.length > 0 ? (
-                  <div className="space-y-3">
-                    {report.skillGaps.map((gap, idx) => (
-                      <SkillGapBadge key={idx} skillGap={gap} />
-                    ))}
-                  </div>
-                ) : (
-                  <div className="flex items-center gap-2 text-green-700 bg-green-50 p-3 rounded-lg">
-                    <CheckCircle2 className="h-5 w-5" />
-                    <span className="text-sm font-medium">No major skill gaps identified!</span>
-                  </div>
-                )}
-              </div>
-
-              {/* Preparation Plan */}
-              <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6">
-                <PreparationPlan plan={report.preparationPlan} />
-              </div>
+            {/* Full Width Bottom - Preparation Plan */}
+            <div className="bg-gray-50 rounded-2xl border border-gray-200 p-6 w-full">
+              <PreparationPlan plan={report.preparationPlan} />
             </div>
           </div>
         )}

@@ -9,8 +9,8 @@ export const PreparationPlan = ({ plan }: PreparationPlanProps) => {
   if (!plan || plan.length === 0) return null;
 
   return (
-    <div className="space-y-6">
-      <h3 className="text-xl font-bold text-gray-900">Recommended Preparation Plan</h3>
+    <div className="space-y-4">
+      <h3 className="text-2xl font-bold text-gray-900">Recommended Preparation Plan</h3>
       
       <div className="relative border-l-2 border-gray-200 ml-3 md:ml-4 space-y-8 pb-4">
         {plan.map((dayPlan, idx) => (
